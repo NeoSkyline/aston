@@ -1,7 +1,7 @@
 import java.util.Scanner;
     public class Main {
         public static void main(String[] args) {
-            eightTask();j
+            eightTask();
         }
         public static void eightTask() {
             Scanner scanner = new Scanner(System.in);
