@@ -1,20 +1,26 @@
-public class Amusement {
-    private String Name;
-    private String hoursOfWork;
-    private String price;
-    public Amusement(String Name, String hoursOfWork, String price) {
-        this.Name = Name;
-        this.hoursOfWork = hoursOfWork;
-        this.price = price;
+public class Park {
+    private String parkname;
+
+    public Park(String parkname) {
+        this.parkname = parkname;
     }
-    public void printThirdTask() {
-        System.out.println("Название: " + Name);
-        System.out.println("Отработанные часы: " + hoursOfWork);
-        System.out.println("Стоимоть: " + price);
-//
-    }
+    public class Attractions {
+        private String atrName;
+        private String hoursOfWork;
+        private String price;
+        public Attractions(String atrName, String hoursOfWork, String price) {
+            this.atrName = atrName;
+            this.hoursOfWork = hoursOfWork;
+            this.price = price;
+        }
+        public void showInfo() {System.out.println("Аттракцион: " + atrName + "Время работы: " + hoursOfWork + "Стоимость: " + price);}
+        public void showParkInfo(){ System.out.println("Парк: " + parkname);}
+}
+
     public static void main(String[] args) {
-        Amusement Amusement = new Amusement("break your legs ", "1155", "750000");
-        Amusement.printThirdTask();
+        Park park = new Park("Disneyland");
+        Park.Attractions attractions = park.new Attractions("Американские горки", "12:00 - 22:00", "1000");
+        attractions.showParkInfo();
+        attractions.showInfo();
     }
 }
